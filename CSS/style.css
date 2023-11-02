@@ -1,0 +1,1919 @@
+:root {
+  --primaryBackgroundColor: #fff;
+  /*Primary background color*/
+  --secondaryBackgroundColor: #e9ecef;
+  /*Secondary background color*/
+  --borderColor: #dee2e6;
+  /*Border color*/
+  --impText: #495057;
+  /*Headings text color*/
+  --mainColor: #0660d4;
+  /*To highlight important text*/
+  --white: #fff;
+  --black: #000;
+  --servicesDivBackgroundColor: rgba(128, 128, 128, 0.03);
+  --servicesDivBgColorAtHover: rgba(128, 128, 128, 0.05);
+  --fontColor: rgba(0, 0, 0, .86);
+  --portfolioBackgroundEffectBackgroundColor: rgba(233, 236, 239, .5);
+  --footerColor: rgba(233, 236, 239, 0.35);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --primaryBackgroundColor: #000000dc;
+    /*Primary background color*/
+    --secondaryBackgroundColor: #4d4e4f;
+    /*Secondary background color*/
+    --borderColor: #818385;
+    /*Border color*/
+    --impText: #e4effa;
+    /*Headings text color*/
+    --mainColor: crimson;
+    /*To highlight important text*/
+    --white: #fff;
+    --black: #fff;
+    --servicesDivBackgroundColor: rgba(128, 128, 128, 0.03);
+    --servicesDivBgColorAtHover: rgba(128, 128, 128, 0.05);
+    --fontColor: rgba(255, 255, 255, .86);
+    --portfolioBackgroundEffectBackgroundColor: rgba(233, 236, 239, .5);
+    --footerColor: rgba(22, 19, 16, 0.35);
+  }
+
+  #home {
+    background-image: url(../IMAGES/home-bg-dark.svg);
+  }
+
+  #portfolio .portfolio-flex div.img>div h1 {
+    color: #000 !important;
+  }
+
+  #portfolio .portfolio-flex div.img>div p {
+    color: #000 !important;
+  }
+
+  #contact div.address div.address-right form input {
+    background: transparent;
+    color: var(--white);
+  }
+
+  #contact div.address div.address-right form textarea {
+    background: transparent;
+    color: var(--white);
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  scroll-behavior: smooth;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+/* NAV DESIGNING*/
+#nav {
+  position: fixed;
+  left: 1rem;
+  width: fit-content;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-size: 1.25rem;
+  z-index: 3;
+}
+
+#nav a {
+  display: flex;
+  align-items: center;
+  border-radius: 2rem;
+  text-decoration: none;
+  color: var(--impText);
+  margin-bottom: .6rem;
+  width: 3rem;
+  transition: .3s;
+}
+
+#nav a i {
+  font-size: 1.5rem;
+  padding: 1rem;
+  background: var(--secondaryBackgroundColor);
+  border-radius: 50%;
+  transition: .3s;
+}
+
+#nav a p {
+  overflow-x: hidden;
+  display: none;
+  font-size: 1.1rem;
+  font-weight: 600;
+  padding-right: 1rem;
+  margin-left: -0.8rem;
+}
+
+#nav a:hover {
+  width: 100%;
+  background-color: var(--mainColor);
+  color: var(--white);
+}
+
+#nav a:hover i {
+  background-color: var(--mainColor);
+}
+
+#nav a:hover p {
+  display: block;
+}
+
+#nav a.active {
+  color: var(--white);
+}
+
+#nav a.active i {
+  background-color: var(--mainColor);
+}
+
+@keyframes home-word-frontend-animation {
+  0% {
+    content: '';
+  }
+
+  1% {
+    content: 'F';
+  }
+
+  2% {
+    content: 'Fr';
+  }
+
+  3% {
+    content: 'Fro';
+  }
+
+  4% {
+    content: 'Fron';
+  }
+
+  5% {
+    content: 'Front';
+  }
+
+  6% {
+    content: 'Fronte';
+  }
+
+  7% {
+    content: 'Fronten';
+  }
+
+  8% {
+    content: 'Frontend';
+  }
+
+  9% {
+    content: 'Frontend ';
+  }
+
+  10% {
+    content: 'Frontend D';
+  }
+
+  11% {
+    content: 'Frontend De';
+  }
+
+  12% {
+    content: 'Frontend Dev';
+  }
+
+  13% {
+    content: 'Frontend Deve';
+  }
+
+  14% {
+    content: 'Frontend Devel';
+  }
+
+  15% {
+    content: 'Frontend Develo';
+  }
+
+  16% {
+    content: 'Frontend Develop';
+  }
+
+  17% {
+    content: 'Frontend Develope';
+  }
+
+  18% {
+    content: 'Frontend Developer';
+    border-right: 0.25rem solid var(--mainColor);
+  }
+
+  19% {
+    border-right: .25rem solid transparent;
+  }
+
+  20% {
+    border-right: 0.25rem solid var(--mainColor);
+  }
+
+  21% {
+    content: 'Frontend Developer';
+  }
+
+  22% {
+    content: 'Frontend Develope';
+  }
+
+  23% {
+    content: 'Frontend Develop';
+  }
+
+  24% {
+    content: 'Frontend Develo';
+  }
+
+  25% {
+    content: 'Frontend Devel';
+  }
+
+  26% {
+    content: 'Frontend Deve';
+  }
+
+  27% {
+    content: 'Frontend Dev';
+  }
+
+  28% {
+    content: 'Frontend De';
+  }
+
+  29% {
+    content: 'Frontend Des';
+  }
+
+  30% {
+    content: 'Frontend Desi';
+  }
+
+  31% {
+    content: 'Frontend Desig';
+  }
+
+  32% {
+    content: 'Frontend Design';
+  }
+
+  33% {
+    content: 'Frontend Designe';
+  }
+
+  34% {
+    content: 'Frontend Designer';
+  }
+
+  35% {
+    content: 'Frontend Designe';
+  }
+
+  36% {
+    content: 'Frontend Design';
+  }
+
+  37% {
+    content: 'Frontend Desig';
+  }
+
+  38% {
+    content: 'Frontend Desi';
+  }
+
+  39% {
+    content: 'Frontend Des';
+  }
+
+  40% {
+    content: 'Frontend De';
+  }
+
+  41% {
+    content: 'Frontend D';
+  }
+
+  42% {
+    content: 'Frontend ';
+  }
+
+  43% {
+    content: 'Frontend';
+  }
+
+  44% {
+    content: 'Fronten';
+  }
+
+  45% {
+    content: 'Fronte';
+  }
+
+  46% {
+    content: 'Front';
+  }
+
+  47% {
+    content: 'Fron';
+  }
+
+  48% {
+    content: 'Fro';
+  }
+
+  49% {
+    content: 'Fr';
+  }
+
+  50% {
+    content: 'F';
+  }
+
+  51% {
+    content: '';
+  }
+
+  52% {
+    content: 'W';
+  }
+
+  53% {
+    content: 'We';
+  }
+
+  54% {
+    content: 'Web';
+  }
+
+  55% {
+    content: 'Web ';
+  }
+
+  56% {
+    content: 'Web D';
+  }
+
+  57% {
+    content: 'Web De';
+  }
+
+  58% {
+    content: 'Web Dev';
+  }
+
+  59% {
+    content: 'Web Deve';
+  }
+
+  60% {
+    content: 'Web Devel';
+  }
+
+  61% {
+    content: 'Web Develo';
+  }
+
+  62% {
+    content: 'Web Develop';
+  }
+
+  63% {
+    content: 'Web Develope';
+  }
+
+  64% {
+    content: 'Web Developer';
+    border-right: 0.25rem solid var(--mainColor);
+  }
+
+  65% {
+    border-right: .25rem solid transparent;
+  }
+
+  66% {
+    border-right: 0.25rem solid var(--mainColor);
+  }
+
+  67% {
+    content: 'Web Developer';
+  }
+
+  68% {
+    content: 'Web Develope';
+  }
+
+  69% {
+    content: 'Web Develop';
+  }
+
+  70% {
+    content: 'Web Develo';
+  }
+
+  71% {
+    content: 'Web Devel';
+  }
+
+  72% {
+    content: 'Web Deve';
+  }
+
+  73% {
+    content: 'Web Dev';
+  }
+
+  74% {
+    content: 'Web De';
+  }
+
+  75% {
+    content: 'Web Des';
+  }
+
+  76% {
+    content: 'Web Desi';
+  }
+
+  77% {
+    content: 'Web Desig';
+  }
+
+  78% {
+    content: 'Web Design';
+  }
+
+  79% {
+    content: 'Web Designe';
+  }
+
+  80% {
+    content: 'Web Designer';
+  }
+
+  81% {
+    content: 'Web Designe';
+  }
+
+  82% {
+    content: 'Web Design';
+  }
+
+  83% {
+    content: 'Web Desig';
+  }
+
+  84% {
+    content: 'Web Desi';
+  }
+
+  85% {
+    content: 'Web Des';
+  }
+
+  86% {
+    content: 'Web De';
+  }
+
+  87% {
+    content: 'Web D';
+  }
+
+  88% {
+    content: 'Web ';
+  }
+
+  89% {
+    content: 'Web';
+  }
+
+  90% {
+    content: 'We';
+  }
+
+  91% {
+    content: 'W';
+  }
+
+  92% {
+    content: '';
+    border-right: 0.25rem solid var(--mainColor);
+  }
+
+  93% {
+    border-right: .25rem solid transparent;
+  }
+
+  94% {
+    border-right: 0.25rem solid var(--mainColor);
+  }
+
+  95% {
+    border-right: .25rem solid transparent;
+  }
+
+  96% {
+    border-right: 0.25rem solid var(--mainColor);
+  }
+
+  97% {
+    border-right: .25rem solid transparent;
+  }
+
+  98% {
+    border-right: 0.25rem solid var(--mainColor);
+  }
+
+  99% {
+    border-right: .25rem solid transparent;
+  }
+
+  100% {
+    border-right: 0.25rem solid var(--mainColor);
+  }
+}
+
+/* HOME SECTION DESIGNING*/
+#home {
+  width: 100vw;
+  height: 100vh;
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 11.5rem;
+  padding-right: 6.25rem;
+}
+
+#home h1 {
+  font-size: 4rem;
+  font-weight: 700;
+  color: var(--impText);
+}
+
+#home h1 span {
+  white-space: nowrap;
+}
+
+#home h3 {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-block: 7px;
+  width: fit-content;
+  display: flex;
+}
+
+#home h3 span {
+  margin-inline: .6rem;
+  padding-inline: 9.5rem;
+  position: relative;
+  color: var(--mainColor);
+  z-index: 2;
+}
+
+#home h3 span:before {
+  border-right: 0.25rem solid var(--mainColor);
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: '';
+  width: fit-content;
+  height: 100%;
+  z-index: -1;
+  padding-right: .125rem;
+  animation: home-word-frontend-animation 20s cubic-bezier(1, 0, 0, 1) 1s infinite normal both;
+  text-align: center;
+}
+
+#home div.icons {
+  width: 15rem;
+  display: flex;
+  justify-content: space-between;
+  font-size: 2rem;
+  margin-top: 1rem;
+  cursor: pointer;
+}
+
+#home div.icons i {
+  transition: .2s;
+  color: var(--impText);
+}
+
+#home div.icons i:hover {
+  color: var(--mainColor);
+}
+
+/* ABOUT SECTION DESIGNING*/
+#about {
+  width: 100vw;
+  height: fit-content;
+  background-color: var(--primaryBackgroundColor);
+  padding-left: 11.5rem;
+  padding-right: 6.25rem;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: var(--fontColor);
+}
+
+#about>h1 {
+  padding-inline: 20px;
+  border-bottom: 2px solid var(--borderColor);
+  position: relative;
+  text-transform: uppercase;
+  -webkit-text-stroke: 0.125rem var(--black);
+  letter-spacing: .125rem;
+  color: transparent;
+}
+
+#about>h1:before {
+  content: '';
+  position: absolute;
+  left: 25%;
+  bottom: -0.17rem;
+  height: .3rem;
+  width: 50%;
+  background-color: var(--mainColor);
+  border-radius: 15px;
+}
+
+#about p {
+  text-align: center;
+  margin-top: 1rem;
+  font-size: 1.02rem;
+  font-weight: 500;
+}
+
+#about div.about-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2rem;
+  gap: 2rem;
+}
+
+#about div.about-content div.image img {
+  width: 25rem;
+}
+
+#about div.about-content div.information {
+  width: 100%;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 5px;
+}
+
+#about div.about-content div.information h2 {
+  color: var(--impText);
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+#about div.about-content div.information p {
+  text-align: left;
+  font-size: 1.1rem;
+}
+
+#about div.about-content div.information section {
+  margin-block: .7rem;
+}
+
+#about div.about-content div.information section div {
+  display: flex;
+}
+
+#about div.about-content div.information section div p {
+  width: 50%;
+  font-weight: 700;
+}
+
+#about div.about-content div.information section div p span {
+  font-weight: 500;
+}
+
+/* SKILLS SECTION DESIGNING*/
+#skills {
+  width: 100vw;
+  height: fit-content;
+  background-color: var(--primaryBackgroundColor);
+  padding-left: 11.5rem;
+  padding-right: 6.25rem;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: var(--fontColor);
+}
+
+#skills>h1 {
+  padding-inline: 20px;
+  border-bottom: 2px solid var(--borderColor);
+  position: relative;
+  text-transform: uppercase;
+  -webkit-text-stroke: 0.125rem var(--black);
+  letter-spacing: .125rem;
+  color: transparent;
+}
+
+#skills>h1:before {
+  content: '';
+  position: absolute;
+  left: 25%;
+  bottom: -0.17rem;
+  height: .3rem;
+  width: 50%;
+  background-color: var(--mainColor);
+  border-radius: 15px;
+}
+
+#skills p {
+  text-align: center;
+  margin-top: 1rem;
+  font-size: 1.02rem;
+  font-weight: 500;
+}
+
+#skills section {
+  width: 100%;
+}
+
+#skills section div.outer {
+  width: 100%;
+  display: flex;
+  margin: 10px 0;
+  padding: 10px 0;
+  flex-wrap: wrap;
+}
+
+#skills section div.outer div {
+  width: 50%;
+  min-width: 200px;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+#skills section div.outer div .fill {
+  margin-top: 10px;
+  width: 90%;
+  height: .7rem;
+  background-color: var(--secondaryBackgroundColor);
+  position: relative;
+  border-radius: 20px;
+}
+
+#skills section div.outer div .fill:before {
+  border-radius: 20px;
+  height: .7rem;
+  content: '';
+  background-color: var(--mainColor);
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+#skills section div.outer div.html .fill:before {
+  width: 90%;
+}
+
+#skills section div.outer div.css .fill:before {
+  width: 85%;
+}
+
+#skills section div.outer div.js .fill:before {
+  width: 70%;
+}
+
+#skills section div.outer div.sass .fill:before {
+  width: 75%;
+}
+
+#skills section div.outer div.bootstrap .fill:before {
+  width: 30%;
+}
+
+#skills section div.outer div.tailwind .fill:before {
+  width: 40%;
+}
+
+/* SERVICES SECTION DESIGNING*/
+#services {
+  width: 100vw;
+  height: fit-content;
+  background-color: var(--primaryBackgroundColor);
+  padding-left: 11.5rem;
+  padding-right: 6.25rem;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: var(--fontColor);
+}
+
+#services>h1 {
+  padding-inline: 20px;
+  border-bottom: 2px solid var(--borderColor);
+  position: relative;
+  text-transform: uppercase;
+  -webkit-text-stroke: 0.125rem var(--black);
+  letter-spacing: .125rem;
+  color: transparent;
+}
+
+#services>h1:before {
+  content: '';
+  position: absolute;
+  left: 25%;
+  bottom: -0.17rem;
+  height: .3rem;
+  width: 50%;
+  background-color: var(--mainColor);
+  border-radius: 15px;
+}
+
+#services p {
+  text-align: center;
+  margin-top: 1rem;
+  font-size: 1.02rem;
+  font-weight: 500;
+}
+
+#services div div.top,
+#services div div.bottom {
+  display: flex;
+}
+
+#services div div.top>div,
+#services div div.bottom>div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 4rem 3.5rem;
+  margin-inline: .5rem;
+  background-color: var(--servicesDivBackgroundColor);
+  transition: .3s;
+  min-width: 200px;
+}
+
+#services div div.top>div:hover,
+#services div div.bottom>div:hover {
+  box-shadow: 1px 1px 5px 7px var(--servicesDivBgColorAtHover);
+}
+
+#services div div.top>div h4,
+#services div div.bottom>div h4 {
+  color: var(--impText);
+}
+
+#services div div.top>div div.icon,
+#services div div.bottom>div div.icon {
+  border: none;
+  box-shadow: none;
+  margin: .5rem;
+  padding: .5rem;
+  width: 100px;
+  text-align: center;
+  position: relative;
+}
+
+#services div div.top>div div.icon i,
+#services div div.bottom>div div.icon i {
+  position: relative;
+  font-size: 3rem;
+  z-index: 1;
+}
+
+#services div div.top>div button,
+#services div div.bottom>div button {
+  padding: .4rem;
+  margin-top: .4rem;
+  background: transparent;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  font-weight: 500;
+  z-index: 2;
+  font-size: 1.1rem;
+  transition: color .8s;
+  color: var(--fontColor);
+}
+
+#services div div.top>div button i,
+#services div div.bottom>div button i {
+  position: relative;
+  top: .14rem;
+}
+
+#services div div.top>div button:before,
+#services div div.bottom>div button:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -.5rem;
+  height: 100%;
+  width: 2.5rem;
+  background-color: var(--mainColor);
+  border-radius: 50%;
+  z-index: -1;
+  transition: .5s;
+}
+
+#services div div.top>div button:after,
+#services div div.bottom>div button:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -.5rem;
+  height: 100%;
+  width: 2.5rem;
+  background-color: var(--mainColor);
+  border-radius: 1.3rem;
+  z-index: -1;
+  transition: .5s;
+}
+
+#services div div.top>div button:hover,
+#services div div.bottom>div button:hover {
+  cursor: pointer;
+  color: var(--secondaryBackgroundColor);
+}
+
+#services div div.top>div button:hover:before,
+#services div div.bottom>div button:hover:before {
+  display: none;
+}
+
+#services div div.top>div button:hover:after,
+#services div div.bottom>div button:hover:after {
+  width: 120%;
+}
+
+#services div div.top h4,
+#services div div.bottom h4 {
+  font-size: 1.7rem;
+  font-weight: 600;
+}
+
+#services div div.top {
+  margin-block: 1rem;
+}
+
+/* PORTFOLIO SECTION DESIGNING*/
+#portfolio {
+  width: 100vw;
+  height: fit-content;
+  background-color: var(--primaryBackgroundColor);
+  padding-left: 11.5rem;
+  padding-right: 6.25rem;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: var(--fontColor);
+  padding-bottom: 2rem;
+}
+
+#portfolio>h1 {
+  padding-inline: 20px;
+  border-bottom: 2px solid var(--borderColor);
+  position: relative;
+  text-transform: uppercase;
+  -webkit-text-stroke: 0.125rem var(--black);
+  letter-spacing: .125rem;
+  color: transparent;
+}
+
+#portfolio>h1:before {
+  content: '';
+  position: absolute;
+  left: 25%;
+  bottom: -0.17rem;
+  height: .3rem;
+  width: 50%;
+  background-color: var(--mainColor);
+  border-radius: 15px;
+}
+
+#portfolio p {
+  text-align: center;
+  margin-top: 1rem;
+  font-size: 1.02rem;
+  font-weight: 500;
+}
+
+#portfolio div.portfolio-flex {
+  display: flex;
+  width: 100%;
+  gap: 1.2rem;
+  margin-block: 2rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+#portfolio div.portfolio-flex>div {
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+  overflow: hidden;
+  gap: 1.2rem;
+  position: relative;
+}
+
+#portfolio div.portfolio-flex div.innerportfolio-flex1>div.img {
+  width: 100%;
+  position: relative;
+  background-size: cover;
+  background-position: center;
+}
+
+#portfolio div.portfolio-flex div.innerportfolio-flex1>div.img>div {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  background-color: var(--portfolioBackgroundEffectBackgroundColor);
+  transform: scale(0);
+  transition: .5s;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-inline: 1rem;
+}
+
+#portfolio div.portfolio-flex div.innerportfolio-flex1>div.img>div p {
+  font-size: 1.1rem;
+}
+
+#portfolio div.portfolio-flex div.innerportfolio-flex1>div.img div.upper {
+  height: 20%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+#portfolio div.portfolio-flex div.innerportfolio-flex1>div.img div.upper div.upperleft {
+  width: 5rem;
+  height: 5rem;
+  margin: .8rem;
+  border-left: 2px solid grey;
+  border-top: 2px solid grey;
+}
+
+#portfolio div.portfolio-flex div.innerportfolio-flex1>div.img div.lower {
+  height: 20%;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background-color: transparent;
+}
+
+#portfolio div.portfolio-flex div.innerportfolio-flex1>div.img div.lower div.lowerright {
+  width: 5rem;
+  height: 5rem;
+  margin: .8rem;
+  border-right: 2px solid grey;
+  border-bottom: 2px solid grey;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+
+#portfolio div.portfolio-flex div.innerportfolio-flex1>div.img:hover div {
+  transform: scale(1);
+}
+
+#portfolio div.portfolio-flex div.innerportfolio-flex1>div.img>div>h1 {
+  padding-inline: 20px;
+  border-bottom: 2px solid var(--borderColor);
+  position: relative;
+  text-transform: uppercase;
+  -webkit-text-stroke: 0.125rem var(--black);
+  letter-spacing: .125rem;
+  color: transparent;
+}
+
+#portfolio div.portfolio-flex div.innerportfolio-flex1>div.img>div>h1:before {
+  content: '';
+  position: absolute;
+  left: 25%;
+  bottom: -0.17rem;
+  height: .3rem;
+  width: 50%;
+  background-color: var(--mainColor);
+  border-radius: 15px;
+}
+
+#portfolio div.portfolio-flex div.innerportfolio-flex1>div.img>div p {
+  text-align: center;
+  margin-top: 1rem;
+  font-size: 1.02rem;
+  font-weight: 500;
+}
+
+#portfolio div.portfolio-flex div.innerportfolio-flex1>div.img>div h1 {
+  -webkit-text-stroke: unset;
+  color: var(--impText);
+}
+
+#portfolio div.portfolio-flex div.innerportfolio-flex1>div.img1 {
+  height: 35rem;
+  background-image: url("../IMAGES/img1.jpg");
+}
+
+#portfolio div.portfolio-flex div.innerportfolio-flex1>div.img2 {
+  height: 35rem;
+  background-image: url("../IMAGES/img2.jpg");
+}
+
+#portfolio div.portfolio-flex div.innerportfolio-flex2>div.img {
+  width: 100%;
+  position: relative;
+  background-size: cover;
+  background-position: center;
+}
+
+#portfolio div.portfolio-flex div.innerportfolio-flex2>div.img>div {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  background-color: var(--portfolioBackgroundEffectBackgroundColor);
+  transform: scale(0);
+  transition: .5s;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-inline: 1rem;
+}
+
+#portfolio div.portfolio-flex div.innerportfolio-flex2>div.img>div p {
+  font-size: 1.1rem;
+}
+
+#portfolio div.portfolio-flex div.innerportfolio-flex2>div.img div.upper {
+  height: 20%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+#portfolio div.portfolio-flex div.innerportfolio-flex2>div.img div.upper div.upperleft {
+  width: 5rem;
+  height: 5rem;
+  margin: .8rem;
+  border-left: 2px solid grey;
+  border-top: 2px solid grey;
+}
+
+#portfolio div.portfolio-flex div.innerportfolio-flex2>div.img div.lower {
+  height: 20%;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background-color: transparent;
+}
+
+#portfolio div.portfolio-flex div.innerportfolio-flex2>div.img div.lower div.lowerright {
+  width: 5rem;
+  height: 5rem;
+  margin: .8rem;
+  border-right: 2px solid grey;
+  border-bottom: 2px solid grey;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+
+#portfolio div.portfolio-flex div.innerportfolio-flex2>div.img:hover div {
+  transform: scale(1);
+}
+
+#portfolio div.portfolio-flex div.innerportfolio-flex2>div.img>div>h1 {
+  padding-inline: 20px;
+  border-bottom: 2px solid var(--borderColor);
+  position: relative;
+  text-transform: uppercase;
+  -webkit-text-stroke: 0.125rem var(--black);
+  letter-spacing: .125rem;
+  color: transparent;
+}
+
+#portfolio div.portfolio-flex div.innerportfolio-flex2>div.img>div>h1:before {
+  content: '';
+  position: absolute;
+  left: 25%;
+  bottom: -0.17rem;
+  height: .3rem;
+  width: 50%;
+  background-color: var(--mainColor);
+  border-radius: 15px;
+}
+
+#portfolio div.portfolio-flex div.innerportfolio-flex2>div.img>div p {
+  text-align: center;
+  margin-top: 1rem;
+  font-size: 1.02rem;
+  font-weight: 500;
+}
+
+#portfolio div.portfolio-flex div.innerportfolio-flex2>div.img>div h1 {
+  -webkit-text-stroke: unset;
+  color: var(--impText);
+}
+
+#portfolio div.portfolio-flex div.innerportfolio-flex2>div.img1 {
+  height: 20rem;
+  background-image: url("../IMAGES/img3.jpg");
+}
+
+#portfolio div.portfolio-flex div.innerportfolio-flex2>div.img2 {
+  height: 40rem;
+  background-image: url("../IMAGES/img4.jpg");
+}
+
+#portfolio div.portfolio-flex div.innerportfolio-flex2>div.img3 {
+  height: 15rem;
+  background-image: url("../IMAGES/img9.jpg");
+}
+
+#portfolio div.portfolio-flex div.innerportfolio-flex3>div.img {
+  width: 100%;
+  position: relative;
+  background-size: cover;
+  background-position: center;
+}
+
+#portfolio div.portfolio-flex div.innerportfolio-flex3>div.img>div {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  background-color: var(--portfolioBackgroundEffectBackgroundColor);
+  transform: scale(0);
+  transition: .5s;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-inline: 1rem;
+}
+
+#portfolio div.portfolio-flex div.innerportfolio-flex3>div.img>div p {
+  font-size: 1.1rem;
+}
+
+#portfolio div.portfolio-flex div.innerportfolio-flex3>div.img div.upper {
+  height: 20%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+#portfolio div.portfolio-flex div.innerportfolio-flex3>div.img div.upper div.upperleft {
+  width: 5rem;
+  height: 5rem;
+  margin: .8rem;
+  border-left: 2px solid grey;
+  border-top: 2px solid grey;
+}
+
+#portfolio div.portfolio-flex div.innerportfolio-flex3>div.img div.lower {
+  height: 20%;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background-color: transparent;
+}
+
+#portfolio div.portfolio-flex div.innerportfolio-flex3>div.img div.lower div.lowerright {
+  width: 5rem;
+  height: 5rem;
+  margin: .8rem;
+  border-right: 2px solid grey;
+  border-bottom: 2px solid grey;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+
+#portfolio div.portfolio-flex div.innerportfolio-flex3>div.img:hover div {
+  transform: scale(1);
+}
+
+#portfolio div.portfolio-flex div.innerportfolio-flex3>div.img>div>h1 {
+  padding-inline: 20px;
+  border-bottom: 2px solid var(--borderColor);
+  position: relative;
+  text-transform: uppercase;
+  -webkit-text-stroke: 0.125rem var(--black);
+  letter-spacing: .125rem;
+  color: transparent;
+}
+
+#portfolio div.portfolio-flex div.innerportfolio-flex3>div.img>div>h1:before {
+  content: '';
+  position: absolute;
+  left: 25%;
+  bottom: -0.17rem;
+  height: .3rem;
+  width: 50%;
+  background-color: var(--mainColor);
+  border-radius: 15px;
+}
+
+#portfolio div.portfolio-flex div.innerportfolio-flex3>div.img>div p {
+  text-align: center;
+  margin-top: 1rem;
+  font-size: 1.02rem;
+  font-weight: 500;
+}
+
+#portfolio div.portfolio-flex div.innerportfolio-flex3>div.img>div h1 {
+  -webkit-text-stroke: unset;
+  color: var(--impText);
+}
+
+#portfolio div.portfolio-flex div.innerportfolio-flex3>div.img1 {
+  height: 17rem;
+  background-image: url("../IMAGES/img5.jpg");
+}
+
+#portfolio div.portfolio-flex div.innerportfolio-flex3>div.img2 {
+  height: 17rem;
+  background-image: url("../IMAGES/img6.jpg");
+}
+
+#portfolio div.portfolio-flex div.innerportfolio-flex3>div.img3 {
+  height: 17rem;
+  background-image: url("../IMAGES/img7.jpg");
+}
+
+#portfolio div.portfolio-flex div.innerportfolio-flex3>div.img4 {
+  height: 17rem;
+  background-image: url("../IMAGES/img8.jpg");
+}
+
+/* CONTACT SECTION DESIGNING*/
+#contact {
+  width: 100vw;
+  height: fit-content;
+  background-color: var(--primaryBackgroundColor);
+  padding-left: 11.5rem;
+  padding-right: 6.25rem;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: var(--fontColor);
+  padding-top: 2rem;
+}
+
+#contact>h1 {
+  padding-inline: 20px;
+  border-bottom: 2px solid var(--borderColor);
+  position: relative;
+  text-transform: uppercase;
+  -webkit-text-stroke: 0.125rem var(--black);
+  letter-spacing: .125rem;
+  color: transparent;
+}
+
+#contact>h1:before {
+  content: '';
+  position: absolute;
+  left: 25%;
+  bottom: -0.17rem;
+  height: .3rem;
+  width: 50%;
+  background-color: var(--mainColor);
+  border-radius: 15px;
+}
+
+#contact p {
+  text-align: center;
+  margin-top: 1rem;
+  font-size: 1.02rem;
+  font-weight: 500;
+}
+
+#contact div.address {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding-top: 5rem;
+}
+
+#contact div.address div.address-left {
+  width: 35%;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+#contact div.address div.address-left>div {
+  display: flex;
+  align-items: center;
+  width: fit-content;
+  transition: .3s;
+}
+
+#contact div.address div.address-left>div i {
+  font-size: 2rem;
+  padding: .6rem;
+  margin-right: .5rem;
+  border: 2px solid var(--secondaryBackgroundColor);
+  border-radius: 50%;
+  transition: .2s;
+}
+
+#contact div.address div.address-left>div div.info {
+  line-height: 1.25rem;
+}
+
+#contact div.address div.address-left>div div.info p {
+  text-align: left;
+}
+
+#contact div.address div.address-left>div div.info p span {
+  white-space: nowrap;
+}
+
+#contact div.address div.address-left>div:hover {
+  color: var(--mainColor);
+}
+
+#contact div.address div.address-left>div:hover i {
+  border: 2px solid var(--mainColor);
+}
+
+#contact div.address div.address-right {
+  width: 65%;
+}
+
+#contact div.address div.address-right form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+#contact div.address div.address-right form div.info {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+#contact div.address div.address-right form div.info input {
+  width: 47.5%;
+}
+
+#contact div.address div.address-right form input {
+  width: 100%;
+  font-size: 1.3rem;
+  border-radius: 0.4rem;
+  padding: .5rem 1rem;
+  border: 2px solid var(--secondaryBackgroundColor);
+  outline: none;
+}
+
+#contact div.address div.address-right form textarea {
+  width: 100%;
+  font-size: 1.3rem;
+  border-radius: 0.4rem;
+  padding: .5rem 1rem;
+  border: 2px solid var(--secondaryBackgroundColor);
+  outline: none;
+  resize: vertical;
+}
+
+#contact div.address div.address-right form>button {
+  width: fit-content;
+  font-size: 1.5rem;
+  padding: .5rem 2rem;
+  background-color: var(--mainColor);
+  border: none;
+  border-radius: 2rem;
+  color: var(--secondaryBackgroundColor);
+  transition: .3s;
+  display: flex;
+  align-items: center;
+}
+
+#contact div.address div.address-right form>button:hover {
+  color: var(--mainColor);
+  background-color: var(--secondaryBackgroundColor);
+  cursor: pointer;
+}
+
+#contact div.address div.address-right form>button i {
+  position: relative;
+  top: .2rem;
+}
+
+/* FOOTER SECTION DESIGNING*/
+#footer {
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: .8rem;
+  background-color: var(--footerColor);
+  padding-top: 2rem;
+  padding-bottom: 1rem;
+}
+
+#footer h1 {
+  font-family: 'Poppins', sans-serif;
+}
+
+#footer div.footer-icons {
+  font-size: 1.5rem;
+  cursor: pointer;
+  display: flex;
+  gap: .6rem;
+}
+
+#footer div.footer-icons i {
+  border: 2px solid var(--mainColor);
+  border-radius: 50%;
+  padding: .5rem;
+  color: var(--mainColor);
+  transition: .4s;
+}
+
+#footer div.footer-icons i:hover {
+  background-color: var(--mainColor);
+  color: var(--primaryBackgroundColor);
+}
+
+#footer p span {
+  color: var(--mainColor);
+}
+
+/* MEDIA QUERIES*/
+@media screen and (max-width: 7680px) {
+  html {
+    font-size: 335%;
+  }
+}
+
+@media screen and (max-width: 4320px) {
+  html {
+    font-size: 207%;
+  }
+}
+
+@media screen and (max-width: 2560px) {
+  html {
+    font-size: 155%;
+  }
+}
+
+@media screen and (max-width: 2160px) {
+  html {
+    font-size: 130%;
+  }
+}
+
+/* MEDIA QUERIES WITH INCREASING SIZE IS WRITTEN ABOVE*/
+@media screen and (max-width: 1920px) {
+
+  /* MAIN MEDIA QUERY*/
+  html {
+    font-size: 100%;
+  }
+}
+
+/* MEDIA QUERIES WITH DECERASING SIZE IS WRITTEN BELOW*/
+@media screen and (max-width: 1280px) {
+  html {
+    font-size: 95%;
+  }
+
+  #home,
+  #about,
+  #services,
+  #skills,
+  #portfolio,
+  #contact {
+    padding-left: 11.5rem;
+    padding-right: 5rem;
+  }
+}
+
+@media screen and (max-width: 1080px) {
+  html {
+    font-size: 80%;
+  }
+
+  #home,
+  #about,
+  #services,
+  #skills,
+  #portfolio,
+  #contact {
+    padding-left: 10.5rem;
+    padding-right: 4.5rem;
+  }
+}
+
+@media screen and (max-width: 960px) {
+  html {
+    font-size: 75%;
+  }
+
+  #services div {
+    display: flex;
+  }
+
+  #services div div.top,
+  div.bottom {
+    flex-direction: column;
+    gap: 1.2rem;
+  }
+
+  div.bottom {
+    margin-block: 1rem;
+  }
+
+  #home,
+  #about,
+  #services,
+  #skills,
+  #portfolio,
+  #contact {
+    padding-left: 9.5rem;
+    padding-right: 4rem;
+  }
+
+  #portfolio div.portfolio-flex>div {
+    width: 48%;
+  }
+
+  #portfolio div.portfolio-flex div.innerportfolio-flex3 {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    overflow: visible;
+  }
+
+  #portfolio div.portfolio-flex div.innerportfolio-flex3 div.img {
+    width: 48%;
+  }
+
+  #portfolio div.portfolio-flex div.innerportfolio-flex3 div.img1 {
+    position: relative;
+    top: -6rem;
+  }
+
+  #portfolio div.portfolio-flex div.innerportfolio-flex3 div.img3 {
+    position: relative;
+    top: -6rem;
+  }
+}
+
+@media screen and (max-width: 850px) {
+  html {
+    font-size: 65%;
+  }
+
+  #about .about-content .image img {
+    display: none;
+  }
+
+  #home,
+  #about,
+  #services,
+  #skills,
+  #portfolio,
+  #contact {
+    padding-left: 8.5rem;
+    padding-right: 3.5rem;
+  }
+}
+
+@media screen and (max-width: 720px) {
+  html {
+    font-size: 75%;
+  }
+
+  #home,
+  #about,
+  #services,
+  #skills,
+  #portfolio,
+  #contact {
+    padding-left: 7.5rem;
+    padding-right: 3rem;
+  }
+
+  #contact div.address {
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  #contact div.address div.address-left {
+    width: 100%;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  #contact div.address div.address-left>div {
+    width: 46%;
+  }
+
+  #contact div.address div.address-right {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 580px) {
+  html {
+    font-size: 70%;
+  }
+
+  #skills section div.outer {
+    justify-content: center;
+    margin: 0;
+    padding-block: 0;
+  }
+
+  #skills section div.outer div {
+    margin: 5px 0;
+  }
+
+  #services div.top,
+  div.bottom {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  #services div.top {
+    margin-block: 0;
+  }
+
+  #services div {
+    flex-direction: column;
+  }
+
+  #services div.bottom {
+    margin-block: 0;
+  }
+
+  #home,
+  #about,
+  #services,
+  #skills,
+  #portfolio,
+  #contact {
+    padding-left: 6.5rem;
+    padding-right: 2.5rem;
+  }
+
+  #about div.about-content div.information section {
+    margin-block: 0;
+  }
+
+  #about div.about-content div.information section div {
+    flex-direction: column;
+  }
+
+  #about div.about-content div.information section div p {
+    width: 100%;
+    font-weight: 700;
+  }
+
+  #about div.about-content div.information section div p span {
+    font-weight: 500;
+  }
+
+  #portfolio div.portfolio-flex {
+    flex-direction: column;
+  }
+
+  #portfolio div.portfolio-flex>div {
+    width: 100%;
+  }
+
+  div.innerportfolio-flex3 {
+    display: flex;
+    flex-direction: column !important;
+    flex-wrap: wrap;
+    width: 100%;
+    overflow: hidden;
+  }
+
+  div.innerportfolio-flex3 div.img {
+    width: 100% !important;
+  }
+
+  div.innerportfolio-flex3 div.img1 {
+    top: 0rem !important;
+  }
+
+  div.innerportfolio-flex3 div.img3 {
+    top: 0rem !important;
+  }
+
+  #contact div.address div.address-left {
+    width: 100%;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+
+  #contact div.address div.address-left>div {
+    width: 100%;
+  }
+
+  #contact div.address div.address-right form div.info {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  #contact div.address div.address-right form div.info input {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 460px) {
+  html {
+    font-size: 60%;
+  }
+
+  #home,
+  #about,
+  #services,
+  #skills,
+  #portfolio,
+  #contact {
+    padding-left: 5.5rem;
+    padding-right: 1.5rem;
+  }
+
+  * {
+    text-align: center;
+  }
+
+  #skills section div.outer div {
+    text-align: left;
+  }
+
+  #home div.icons {
+    margin: 0 auto;
+  }
+
+  #contact * {
+    text-align: left;
+  }
+
+  #home {
+    align-items: center;
+  }
+
+  #home h1 span {
+    white-space: wrap;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

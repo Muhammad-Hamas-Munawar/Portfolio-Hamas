@@ -1,0 +1,1449 @@
+// SASS variables
+$primaryBackgroundColor: #fff; //Primary background color
+$secondaryBackgroundColor: #e9ecef; //Secondary background color
+$borderColor: #dee2e6; //Border color
+$impText: #495057;//Headings text color
+$mainColor: #0660d4;//To highlight important text
+$white:#fff;
+$black:#000;
+$servicesDivBackgroundColor:rgba(128, 128, 128, 0.03);
+$servicesDivBgColorAtHover:rgba(128, 128, 128, 0.05);
+$fontColor:rgba(0, 0, 0, .86);
+$portfolioBackgroundEffectBackgroundColor:rgba(233, 236, 239,.5);
+$footerColor:rgba(233, 236, 239, 0.35);
+
+:root{
+    // CSS variables
+    --primaryBackgroundColor: #fff; /*Primary background color*/
+    --secondaryBackgroundColor: #e9ecef; /*Secondary background color*/
+    --borderColor: #dee2e6; /*Border color*/
+    --impText: #495057;/*Headings text color*/
+    --mainColor: #0660d4;/*To highlight important text*/
+    --white:#fff;
+    --black:#000;
+    --servicesDivBackgroundColor:rgba(128, 128, 128, 0.03);
+    --servicesDivBgColorAtHover:rgba(128, 128, 128, 0.05);
+    --fontColor:rgba(0, 0, 0, .86);
+    --portfolioBackgroundEffectBackgroundColor:rgba(233, 236, 239,.5);
+    --footerColor:rgba(233, 236, 239, 0.35);
+}
+
+@media (prefers-color-scheme:dark){
+    :root {
+        --primaryBackgroundColor: #000000dc; /*Primary background color*/
+        --secondaryBackgroundColor: #4d4e4f; /*Secondary background color*/
+        --borderColor: #818385; /*Border color*/
+        --impText: #e4effa;/*Headings text color*/
+        --mainColor: crimson;/*To highlight important text*/
+        --white:#fff;
+        --black:#fff;
+        --servicesDivBackgroundColor:rgba(128, 128, 128, 0.03);
+        --servicesDivBgColorAtHover:rgba(128, 128, 128, 0.05);
+        --fontColor:rgba(255, 255, 255, .86);
+        --portfolioBackgroundEffectBackgroundColor:rgba(233, 236, 239,.5);
+        --footerColor:rgba(22, 19, 16, 0.35);
+    }
+    #home {
+        background-image: url(../IMAGES/home-bg-dark.svg);
+    }
+
+    #portfolio {
+        .portfolio-flex{
+            div.img {
+                >div {
+                    h1 {
+                        color: #000!important;
+                    }
+                    p {
+                        color: #000!important;
+                    }
+                }
+            }
+        }
+    }
+    #contact {
+        div.address {
+            div.address-right {
+                form {
+                    input{
+                        // border: none!important;
+                        background: transparent;
+                        color: var(--white);
+                    }
+                    textarea{
+                        // border: none!important;
+                        background: transparent;
+                        color: var(--white);
+                    }
+                }
+            }
+        }
+    }
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+// NAV DESIGNING
+/* NAV DESIGNING*/
+#nav {
+    position: fixed;
+    left: 1rem;
+    width: fit-content;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 1.25rem;
+
+    z-index: 3;
+
+    a {
+        display: flex;
+        align-items: center;
+        border-radius: 2rem;
+        text-decoration: none;
+        color: var(--impText);
+        margin-bottom: .6rem;
+        width: 3rem;
+        transition: .3s;
+        i {
+            font-size: 1.5rem;
+            padding: 1rem;
+            background: var(--secondaryBackgroundColor);
+            border-radius: 50%;
+            transition: .3s;
+        }
+        p {
+            overflow-x: hidden;
+            display: none;
+            font-size: 1.1rem;
+            font-weight: 600;
+            padding-right: 1rem;
+            margin-left:-.8rem ;
+        }
+        &:hover {
+            width: 100%;
+            background-color: var(--mainColor);
+            color: var(--white);
+            i {
+                background-color: var(--mainColor);
+            }
+            p {
+                display: block;
+            }
+        }
+    }
+    a.active {
+        color: var(--white);
+        i {
+            background-color: var(--mainColor);
+        }
+    }
+}
+
+
+@keyframes home-word-frontend-animation{
+    0% {
+        content: '';
+    }
+    1% {
+        content: 'F';
+    }
+    2% {
+        content: 'Fr';
+    }
+    3% {
+        content: 'Fro';
+    }
+    4% {
+        content: 'Fron';
+    }
+    5% {
+        content: 'Front';
+    }
+    6% {
+        content: 'Fronte';
+    }
+    7% {
+        content: 'Fronten';
+    }
+    8% {
+        content: 'Frontend';
+    }
+    9% {
+        content: 'Frontend ';
+    }
+    10% {
+        content: 'Frontend D';
+    }
+    11% {
+        content: 'Frontend De';
+    }
+    12% {
+        content: 'Frontend Dev';
+    }
+    13% {
+        content: 'Frontend Deve';
+    }
+    14% {
+        content: 'Frontend Devel';
+    }
+    15% {
+        content: 'Frontend Develo';
+    }
+    16% {
+        content: 'Frontend Develop';
+    }
+    17% {
+        content: 'Frontend Develope';
+    }
+    18% {
+        content: 'Frontend Developer';
+        border-right: .25rem solid var(--mainColor);
+    }
+    19%{
+        border-right: .25rem solid transparent;
+    }
+    20% {
+        border-right: .25rem solid var(--mainColor);
+    }
+    21% {
+        content: 'Frontend Developer';
+    }
+    22% {
+        content: 'Frontend Develope';
+    }
+    23% {
+        content: 'Frontend Develop';
+    }
+    24% {
+        content: 'Frontend Develo';
+    }
+    25% {
+        content: 'Frontend Devel';
+    }
+    26% {
+        content: 'Frontend Deve';
+    }
+    27% {
+        content: 'Frontend Dev';
+    }
+    28% {
+        content: 'Frontend De';
+    }
+    29% {
+        content: 'Frontend Des';
+    }
+    30% {
+        content: 'Frontend Desi';
+    }
+    31% {
+        content: 'Frontend Desig';
+    }
+    32% {
+        content: 'Frontend Design';
+    }
+    33% {
+        content: 'Frontend Designe';
+    }
+    34% {
+        content: 'Frontend Designer';
+    }
+    35% {
+        content: 'Frontend Designe';
+    }
+    36% {
+        content: 'Frontend Design';
+    }
+    37% {
+        content: 'Frontend Desig';
+    }
+    38% {
+        content: 'Frontend Desi';
+    }
+    39% {
+        content: 'Frontend Des';
+    }
+    40% {
+        content: 'Frontend De';
+    }
+    41% {
+        content: 'Frontend D';
+    }
+    42% {
+        content: 'Frontend ';
+    }
+    43% {
+        content: 'Frontend';
+    }
+    44% {
+        content: 'Fronten';
+    }
+    45% {
+        content: 'Fronte';
+    }
+    46% {
+        content: 'Front';
+    }
+    47% {
+        content: 'Fron';
+    }
+    48% {
+        content: 'Fro';
+    }
+    49% {
+        content: 'Fr';
+    }
+    50% {
+        content: 'F';
+    }
+    51% {
+        content: '';
+    }
+    52% {
+        content: 'W';
+    }
+    53% {
+        content: 'We';
+    }
+    54% {
+        content: 'Web';
+    }
+    55% {
+        content: 'Web ';
+    }
+    56% {
+        content: 'Web D';
+    }
+    57% {
+        content: 'Web De';
+    }
+    58% {
+        content: 'Web Dev';
+    }
+    59% {
+        content: 'Web Deve';
+    }
+    60% {
+        content: 'Web Devel';
+    }
+    61% {
+        content: 'Web Develo';
+    }
+    62% {
+        content: 'Web Develop';
+    }
+    63% {
+        content: 'Web Develope';
+    }
+    64% {
+        content: 'Web Developer';
+        border-right: .25rem solid var(--mainColor);
+    }
+    65% {
+        border-right: .25rem solid transparent;
+    }
+    66% {
+        border-right: .25rem solid var(--mainColor);
+    }
+    67% {
+        content: 'Web Developer';
+    }
+    68% {
+        content: 'Web Develope';
+    }
+    69% {
+        content: 'Web Develop';
+    }
+    70% {
+        content: 'Web Develo';
+    }
+    71% {
+        content: 'Web Devel';
+    }
+    72% {
+        content: 'Web Deve';
+    }
+    73% {
+        content: 'Web Dev';
+    }
+    74% {
+        content: 'Web De';
+    }
+    75% {
+        content: 'Web Des';
+    }
+    76% {
+        content: 'Web Desi';
+    }
+    77% {
+        content: 'Web Desig';
+    }
+    78% {
+        content: 'Web Design';
+    }
+    79% {
+        content: 'Web Designe';
+    }
+    80% {
+        content: 'Web Designer';
+    }
+    81% {
+        content: 'Web Designe';
+    }
+    82% {
+        content: 'Web Design';
+    }
+    83% {
+        content: 'Web Desig';
+    }
+    84% {
+        content: 'Web Desi';
+    }
+    85% {
+        content: 'Web Des';
+    }
+    86% {
+        content: 'Web De';
+    }
+    87% {
+        content: 'Web D';
+    }
+    88% {
+        content: 'Web ';
+    }
+    89% {
+        content: 'Web';
+    }
+    90% {
+        content: 'We';
+    }
+    91% {
+        content: 'W';
+    }
+    92% {
+        content: '';                
+        border-right: .25rem solid var(--mainColor);
+    }
+    93% {
+        border-right: .25rem solid transparent;
+    }
+    94% {
+        border-right: .25rem solid var(--mainColor);
+    }
+    95% {
+        border-right: .25rem solid transparent;
+    }
+    96% {
+        border-right: .25rem solid var(--mainColor);
+    }
+    97% {
+        border-right: .25rem solid transparent;
+    }
+    98% {
+        border-right: .25rem solid var(--mainColor);
+    }
+    99% {
+        border-right: .25rem solid transparent;
+    }
+    100% {
+        border-right: .25rem solid var(--mainColor);
+    }
+}
+// HOME SECTION DESIGNING
+/* HOME SECTION DESIGNING*/
+#home {
+    width: 100vw;
+    height: 100vh;
+    // background-image: url(../IMAGES/home-bg-light.svg);
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 11.5rem;
+    padding-right: 6.25rem;
+    h1 {
+        font-size: 4rem;
+        font-weight: 700;
+        color: var(--impText);
+
+        span {
+            white-space: nowrap;
+        }
+    }
+    h3 {
+        font-size: 2rem;
+        font-weight: 600;
+        margin-block: 7px;
+        width: fit-content;
+        display: flex;
+
+        span {
+            margin-inline: .6rem;
+            padding-inline:  9.5rem;
+            position: relative;
+            color: var(--mainColor);
+            z-index: 2;
+            &:before {
+                border-right: .25rem solid var(--mainColor);
+                position: absolute;
+                top: 0;
+                left: 0;
+                content: '';
+                width: fit-content;
+                height: 100%;
+                z-index: -1;
+                padding-right: .125rem;
+                animation: home-word-frontend-animation 20s cubic-bezier(1,0,0,1) 1s infinite normal both;
+                text-align: center;
+            }
+        }
+
+    }
+    div.icons {
+        width: 15rem;
+        display: flex;
+        justify-content: space-between;
+        font-size: 2rem;
+        margin-top: 1rem;
+        cursor: pointer;
+        i {
+            transition: .2s;
+            color: var(--impText);
+            &:hover {
+                color: var(--mainColor);
+                
+            }
+        }
+    }
+}
+
+// MIXIN USED IN EACH SECTION (ABOUT,SKILLS,SERVICES,PORTFOLIO)
+@mixin heading-before-effect-and-sucessive-paragraph(){
+    >h1 {
+        padding-inline: 20px;
+        border-bottom: 2px solid var(--borderColor);
+        position: relative;
+        text-transform: uppercase;
+        -webkit-text-stroke: .125rem var(--black);
+        letter-spacing: .125rem;
+        color: transparent;
+        //BEFORE EFFECT
+        &:before {
+            content: '';
+            position: absolute;
+            left: 50%-25%;
+            bottom: -0.17rem;
+            height: .3rem;
+            width: 50%;
+            background-color: var(--mainColor);
+            border-radius: 15px;
+        }
+    }
+    //SUCESSIVE PARAGRAPH
+    p {
+        text-align: center;
+        margin-top: 1rem;
+        font-size: 1.02rem;
+        font-weight: 500;
+    }
+}
+
+
+// MIXIN FOR (ABOUT,SKILLS,SERVICES,PORTFOLIO) ITSELF
+@mixin about-skills-services-portfolio-self-css(){
+    width: 100vw;
+    height: fit-content;
+    background-color: var(--primaryBackgroundColor);
+    padding-left: 11.5rem;
+    padding-right: 6.25rem;
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: var(--fontColor);
+}
+
+// ABOUT SECTION DESIGNING
+/* ABOUT SECTION DESIGNING*/
+#about {
+    
+    @include about-skills-services-portfolio-self-css();
+
+    @include heading-before-effect-and-sucessive-paragraph();
+
+    div.about-content {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 2rem;
+        gap: 2rem;
+
+        div.image {
+            img {
+                width: 25rem;
+            }
+        }
+
+        div.information {
+            width: 100%;
+            text-align: left;
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 5px;
+            h2 {
+                color: var(--impText);
+                font-size: 2rem;
+                font-weight: 600;
+            }
+
+            p {
+                text-align: left;
+                font-size: 1.1rem;
+            }
+
+            section {
+                margin-block: .7rem;
+                div {
+                    display: flex;
+                    p {
+                        width: 50%;
+                        font-weight: 700;
+                        span {
+                            font-weight: 500;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+// SKILLS SECTION DESIGNING
+/* SKILLS SECTION DESIGNING*/
+#skills {
+
+    @include about-skills-services-portfolio-self-css();
+
+    @include heading-before-effect-and-sucessive-paragraph();
+
+    section {
+        width: 100%;
+        div.outer {
+            width: 100%;
+            display: flex;
+            margin: 10px 0;
+            padding: 10px 0;
+            flex-wrap: wrap;
+
+            div {
+                width: 50%;
+                min-width: 200px;
+                font-size: 1.2rem;
+                font-weight: 600;
+                .fill {
+                    margin-top: 10px;
+                    width: 90%;
+                    height: .7rem;
+                    background-color: var(--secondaryBackgroundColor);
+                    position: relative;
+                    border-radius: 20px;
+                    &:before {
+                        border-radius: 20px;
+                        height: .7rem;
+                        content: '';
+                        background-color: var(--mainColor);
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                    }
+                }
+            }
+            div.html .fill {
+                &:before {
+                    width: 90%;
+                }
+            }
+            div.css .fill {
+                &:before {
+                    width: 85%;
+                }
+            }
+            div.js .fill {
+                &:before {
+                    width: 70%;
+                }
+            }
+            div.sass .fill {
+                &:before {
+                    width: 75%;
+                }
+            }
+            div.bootstrap .fill {
+                &:before {
+                    width: 30%;
+                }
+            }
+            div.tailwind .fill {
+                &:before {
+                    width: 40%;
+                }
+            }
+        }
+    }
+}
+
+
+// SERVICES SECTION DESIGNING
+/* SERVICES SECTION DESIGNING*/
+#services {
+
+    @include about-skills-services-portfolio-self-css();
+
+    @include heading-before-effect-and-sucessive-paragraph();
+
+    div {
+
+        div.top,div.bottom {
+            display: flex;
+            
+            >div {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                padding: 4rem 3.5rem;
+                margin-inline: .5rem;
+                background-color: var(--servicesDivBackgroundColor);
+                transition: .3s;
+                min-width: 200px;
+
+                &:hover {
+                    box-shadow: 1px 1px 5px 7px var(--servicesDivBgColorAtHover);
+                }
+
+                h4 {
+                    color: var(--impText);
+                }
+
+                div.icon {
+                    border: none;
+                    box-shadow: none;
+                    margin: .5rem;
+                    padding: .5rem;
+                    width: 100px;
+                    text-align: center;
+                    position: relative;
+
+                    i {
+                        position: relative;
+                        font-size: 3rem;
+                        z-index: 1;
+                    }
+                }
+                button {
+                    padding: .4rem;
+                    margin-top: .4rem;
+                    background: transparent;
+                    border: none;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    position: relative;
+                    font-weight: 500;
+                    z-index: 2;
+                    font-size: 1.1rem;
+                    transition:  color .8s;
+                    color: var(--fontColor);
+
+                    i {
+                        position: relative;
+                        top: .14rem;
+                    }
+    
+                    &:before {
+                        content: '';
+                        position: absolute;
+                        top: 0;
+                        left: -.5rem;
+                        height: 100%;
+                        width: 2.5rem;
+                        background-color: var(--mainColor);
+                        border-radius: 50%;
+                        z-index: -1;
+                        transition: .5s;
+                    }
+                    &:after {
+                        content: '';
+                        position: absolute;
+                        top: 0;
+                        left: -.5rem;
+                        height: 100%;
+                        width: 2.5rem;
+                        background-color: var(--mainColor);
+                        border-radius: 1.3rem;
+                        z-index: -1;
+                        transition: .5s;
+                    }
+                    &:hover {
+                        cursor: pointer;
+                        color: var(--secondaryBackgroundColor);
+                        &:before {
+                            display: none;
+                        }
+                        &:after {
+                            width: 120%;
+                        }
+                    }
+                }
+            }
+            h4 {
+                font-size: 1.7rem;
+                font-weight: 600;
+            }
+        }
+        div.top {
+            margin-block: 1rem;
+        }
+    }
+}
+
+
+// PORTFOLIO MIXINS
+@mixin bgeffect(){
+    >div{
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        left: 0;
+        background-color: var(--portfolioBackgroundEffectBackgroundColor);
+        transform: scale(0);
+        transition: .5s;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding-inline: 1rem;
+        p {
+            font-size: 1.1rem;
+        }
+    }
+    div.upper {
+        height: 20%;
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: flex;
+        justify-content: space-between;
+        div.upperleft {
+            width: 5rem;
+            height: 5rem;
+            margin: .8rem;
+            border-left: 2px solid grey;
+            border-top: 2px solid grey;
+        }
+    }
+    div.lower {
+        height: 20%;
+        width: 100%;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        background-color: transparent;
+
+        div.lowerright {
+            width: 5rem;
+            height: 5rem;
+            margin: .8rem;
+            border-right: 2px solid grey;
+            border-bottom: 2px solid grey;
+            position: absolute;
+            right: 0;
+            bottom: 0;
+        }
+    }
+    &:hover {
+        div {
+            transform: scale(1);
+        }
+    }
+}
+
+//MIXIN USED TO SET CODE OF BACKGROUND OF EACH IMG IN PORTFOLIO SECTION AND ALSO OTHER MIXINS USED INSIDE OF IT WHICH EFFECT BACKGROUND EFFECT , HEADING ,PARAGRAPH
+@mixin div-img-inside-of-portfolio-flex123(){
+    >div.img {
+        width: 100%;
+        position: relative;
+        background-size: cover;
+        background-position: center;
+        @include bgeffect();
+        >div {
+            @include heading-before-effect-and-sucessive-paragraph();
+            h1 {
+                -webkit-text-stroke: unset;
+                color: var(--impText);
+            }
+        }
+    }
+}
+// PORTFOLIO SECTION DESIGNING
+/* PORTFOLIO SECTION DESIGNING*/
+#portfolio {
+
+    @include about-skills-services-portfolio-self-css();
+    padding-bottom: 2rem;
+
+    @include heading-before-effect-and-sucessive-paragraph();
+
+    div.portfolio-flex {
+        display: flex;
+        width: 100%;
+        gap: 1.2rem;
+        margin-block: 2rem;
+        flex-wrap: wrap;
+        justify-content: center;
+        >div {
+            display: flex;
+            flex-direction: column;
+            width: 30%;
+            overflow: hidden;
+            gap: 1.2rem;
+            position: relative;
+        }
+        div.innerportfolio-flex1 {
+
+            @include div-img-inside-of-portfolio-flex123();
+
+            >div.img1{
+                height: 35rem;
+                background-image: url('../IMAGES/img1.jpg');
+            }
+            >div.img2{
+                height: 35rem;
+                background-image: url('../IMAGES/img2.jpg');
+            }
+        }
+        div.innerportfolio-flex2 {
+
+            @include div-img-inside-of-portfolio-flex123();
+
+            >div.img1{
+                height: 20rem;
+                background-image: url('../IMAGES/img3.jpg');
+            }
+
+            >div.img2{
+                height: 40rem;
+                background-image: url('../IMAGES/img4.jpg');
+            }
+            >div.img3{
+                height: 15rem;
+                background-image: url('../IMAGES/img9.jpg');
+            }
+        }
+        div.innerportfolio-flex3 {
+
+            @include div-img-inside-of-portfolio-flex123();
+
+            >div.img1{
+                height: 17rem;
+                background-image: url('../IMAGES/img5.jpg');
+            }
+            >div.img2{
+                height: 17rem;
+                background-image: url('../IMAGES/img6.jpg');
+            }
+            >div.img3{
+                height: 17rem;
+                background-image: url('../IMAGES/img7.jpg');
+            }
+            >div.img4{
+                height: 17rem;
+                background-image: url('../IMAGES/img8.jpg');
+            }
+        }
+    }
+}
+
+// CONTACT SECTION DESIGNING
+/* CONTACT SECTION DESIGNING*/
+#contact {
+    @include about-skills-services-portfolio-self-css();
+    // height: 70vh;
+    padding-top: 2rem;
+
+    @include heading-before-effect-and-sucessive-paragraph();
+
+    div.address {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        padding-top: 5rem;
+
+        div.address-left {
+            width: 35%;
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+
+            >div{
+                display: flex;
+                align-items: center;
+                width: fit-content;
+                transition: .3s;
+
+                i {
+                    font-size: 2rem;
+                    padding: .6rem;
+                    margin-right: .5rem;
+                    border: 2px solid var(--secondaryBackgroundColor);
+                    border-radius: 50%;
+                    transition: .2s;
+                }
+                div.info {
+                    line-height: 1.25rem;
+
+                    p {
+                        text-align: left;
+                        span {
+                            white-space: nowrap;
+                        }
+                    }
+                }
+
+                &:hover {
+                    color: var(--mainColor);
+
+                    i {
+                        border: 2px solid var(--mainColor);
+                    }
+                }
+            }
+        }
+
+
+        div.address-right {
+            width: 65%;
+            
+            form {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 1.5rem;
+
+                div.info {
+                    display: flex;
+                    justify-content: space-between;
+                    width: 100%;
+    
+                    input {
+                        width: 47.5%;
+                    }
+                }
+    
+                input {
+                    width: 100%;
+                    font-size: 1.3rem;
+                    border-radius: 0.4rem;
+                    padding: .5rem 1rem;
+                    border: 2px solid var(--secondaryBackgroundColor);
+                    outline: none;
+                }
+                textarea {
+                    width: 100%;
+                    font-size: 1.3rem;
+                    border-radius: 0.4rem;
+                    padding: .5rem 1rem;
+                    border: 2px solid var(--secondaryBackgroundColor);
+                    outline: none;
+                    resize: vertical;
+                }
+                >button {
+                    width: fit-content;
+                    font-size: 1.5rem;
+                    padding: .5rem 2rem;
+                    background-color: var(--mainColor);
+                    border: none;
+                    border-radius: 2rem;
+                    color: var(--secondaryBackgroundColor);
+                    transition: .3s;
+                    display: flex;
+                    align-items: center;
+                    
+                    &:hover {
+                        color: var(--mainColor);
+                        background-color: var(--secondaryBackgroundColor);
+                        cursor: pointer;
+                    }
+
+                    i {
+                        position: relative;
+                        top: .2rem;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+// FOOTER SECTION DESIGNING
+/* FOOTER SECTION DESIGNING*/
+#footer {
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: .8rem;
+    background-color: var(--footerColor);
+    padding-top: 2rem;
+    padding-bottom: 1rem;
+
+    h1 {
+        font-family: 'Poppins', sans-serif;
+        // margin-top: 1rem;
+    }
+
+    div.footer-icons {
+        font-size: 1.5rem;
+        cursor: pointer;
+        display: flex;
+        gap: .6rem;
+        
+        i{
+            border: 2px solid var(--mainColor);
+            border-radius: 50%;
+            padding: .5rem;
+            color: var(--mainColor);
+            transition: .4s;
+            &:hover {
+                background-color: var(--mainColor);
+                color: var(--primaryBackgroundColor);
+            }
+        }
+    }
+
+    p {
+        span {
+            color: var(--mainColor);
+        }
+    }
+}
+
+// MEDIA QUERIES
+/* MEDIA QUERIES*/
+@media screen and (max-width:7680px){
+    html {
+        font-size:335%;
+    }
+}
+@media screen and (max-width:4320px){
+    html {
+        font-size:207%;
+    }
+}
+@media screen and (max-width:2560px){
+    html {
+        font-size:155%;
+    }
+}
+@media screen and (max-width:2160px){
+    html {
+        font-size:130%;
+    }
+}
+
+// MEDIA QUERIES WITH INCREASING SIZE IS WRITTEN ABOVE
+/* MEDIA QUERIES WITH INCREASING SIZE IS WRITTEN ABOVE*/
+
+@media screen and (max-width:1920px){
+    // MAIN MEDIA QUERY
+    /* MAIN MEDIA QUERY*/
+    html {
+        font-size:100%;
+    }
+}
+
+// MEDIA QUERIES WITH DECERASING SIZE IS WRITTEN BELOW
+/* MEDIA QUERIES WITH DECERASING SIZE IS WRITTEN BELOW*/
+
+// @media screen and (max-width:1440px){
+//     html {
+//         font-size:112%;
+//     }
+// }
+@media screen and (max-width:1280px){
+    html {
+        font-size:95%;
+    }
+    #home,#about,#services,#skills,#portfolio,#contact {
+        padding-left: 11.5rem;
+        padding-right: 5rem;
+    }
+}
+@media screen and (max-width:1080px){
+    html {
+        font-size:80%;
+    }
+    #home,#about,#services,#skills,#portfolio,#contact {
+        padding-left: 10.5rem;
+        padding-right: 4.5rem;
+    }
+
+}
+@media screen and (max-width:960px){
+    html {
+        font-size:75%;
+    }
+    #services div {
+        display: flex;
+    }
+
+    #services div div.top,div.bottom {
+        flex-direction: column;
+        gap: 1.2rem;
+    }
+    div.bottom {
+        margin-block: 1rem;
+    }
+
+    #home,#about,#services,#skills,#portfolio,#contact {
+        padding-left: 9.5rem;
+        padding-right: 4rem;
+    }
+
+    #portfolio div.portfolio-flex {
+        >div {
+            width: 48%;
+        }
+        div.innerportfolio-flex3 {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            width: 100%;
+            overflow: visible;
+            div.img {
+                width: 48%;
+            }
+
+            div.img1 {
+                position: relative;
+                top: -6rem;
+            }
+            div.img3 {
+                position: relative;
+                top: -6rem;
+            }
+        }
+    }
+}
+@media screen and (max-width:850px){
+    html {
+        font-size:65%;
+    }
+
+    #about .about-content .image img {
+        display: none;
+    }
+
+    #home,#about,#services,#skills,#portfolio,#contact {
+        padding-left: 8.5rem;
+        padding-right: 3.5rem;
+    }
+
+
+}
+@media screen and (max-width:720px){
+    html {
+        font-size:75%;
+    }
+    #home,#about,#services,#skills,#portfolio,#contact {
+        padding-left: 7.5rem;
+        padding-right: 3rem;
+    }
+
+    #contact {
+        
+        div.address {
+            flex-direction: column;
+            align-items: center;
+            gap: 2rem;
+
+            div.address-left {
+                width: 100%;
+                flex-direction: row;
+                flex-wrap: wrap;
+                justify-content: center;
+                
+                >div {
+                    width: 46%;
+                }
+            }
+            div.address-right {
+                width: 100%;
+            }
+        }
+    }
+}
+
+
+@media screen and (max-width:580px){
+    html {
+        font-size:70%;
+    }
+    #skills section div.outer {
+        justify-content: center;
+        margin: 0;
+        padding-block: 0;
+        div {
+            margin: 5px 0;
+        }
+    }
+
+    #services div.top,div.bottom {
+        flex-direction: column;
+        gap: 1rem;
+        
+    }
+    #services div.top {
+        margin-block: 0;
+    }
+    
+    #services div {
+        flex-direction: column;
+    }
+    
+    #services div.bottom {
+        margin-block: 0;
+    }
+
+    #home,#about,#services,#skills,#portfolio,#contact {
+        padding-left: 6.5rem;
+        padding-right: 2.5rem;
+    }
+
+
+    #about{ 
+        div.about-content{
+            div.information {
+                section {
+                    margin-block: 0;
+                    div {
+                        flex-direction: column;
+                        p {
+                            width: 100%;
+                            font-weight: 700;
+                            span {
+                                font-weight: 500;
+                            }
+                        }
+                    }
+                }
+            }
+        } 
+    }
+
+
+
+    #portfolio div.portfolio-flex {
+        flex-direction: column;
+        >div {
+            width: 100%;
+        }
+    }
+
+    div.innerportfolio-flex3 {
+        display: flex;
+        flex-direction: column!important;
+        flex-wrap: wrap;
+        width: 100%;
+        overflow: hidden;
+        div.img {
+            width: 100%!important;
+        }
+        div.img1 {
+            top: 0rem!important;
+        }
+        div.img3 {
+            top: 0rem!important;
+        }
+    }
+
+    #contact {
+        
+        div.address {
+
+            div.address-left {
+                width: 100%;
+                flex-direction: column;
+                flex-wrap: wrap;
+                align-items: center;
+
+                >div {
+                    width: 100%;
+                }
+            }
+            div.address-right {
+                form {
+                    div.info {
+                        flex-direction: column;
+                        gap: 2rem;
+                        
+                        input {
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width:460px){
+    html {
+        font-size: 60%;
+    }
+    #home,#about,#services,#skills,#portfolio,#contact {
+        padding-left: 5.5rem;
+        padding-right: 1.5rem;
+    }
+    * {
+        text-align: center;
+    }
+    #skills section {
+        div.outer {
+            div {
+                text-align: left;
+            }
+        }
+    }
+    #home div.icons {
+        margin: 0 auto;
+    }
+
+    #contact * {
+        text-align: left;
+    }
+
+    #home {
+        align-items: center;
+        h1 {
+            span {
+                white-space: wrap;
+            }
+        }
+    }
+}
